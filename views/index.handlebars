@@ -1,0 +1,43 @@
+
+<main role="main">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">Scrape it In</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Articles <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/scrape">scrape</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/notes">See Notes</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="jumbotron  text-center vertical-center">
+      <h1 id="title" class="display-3">Scrape it In!!!</h1>
+      <h4>
+        <p>Scraping With Mongoose</p>
+      </h4>
+      <br>
+    </div>
+    {{#if articlesPage}}
+    {{> articles}}
+    {{/if}}
+    {{#if scrapePage}}
+    {{> scrape}}
+    {{/if}}
+    {{#if notesPage}}
+    {{> notes}}
+    {{/if}}
+  </div>
+</main>
